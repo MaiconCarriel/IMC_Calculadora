@@ -7,6 +7,7 @@ form.addEventListener("submit", function (event) {
   const height = document.getElementById("height").value
 
   const bmi = (weight / (height / 100) ** 2).toFixed(2)
+  value.textContent = bmi.replace(".", ",")
 
   const value = document.getElementById("value")
   let description = ""
@@ -31,6 +32,6 @@ form.addEventListener("submit", function (event) {
     description = "Cuidado! Você está com obesidade morbita"
   }
 
-  value.textContent = bmi.replace(".", ",")
+  //value.textContent = bmi.replace(".", ",")
   document.getElementById("description").textContent = description
 })
